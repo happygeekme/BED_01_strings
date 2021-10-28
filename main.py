@@ -4,6 +4,11 @@ __human_name__ = 'strings'
 
 # Add your code after this line
 
+''' Hallo David, wat super fijn dat jullie de opdrachten ook nakijken. Bij FED gaat dat anders.
+Ik vond het al zo'n gekke opdracht, maar nu het generiek is vind ik hem een stuk logischer.
+Bedankt voor je tijd en uitleg, ik begrijp het nu beter. Hopelijk is het nu wel goed.
+Groetjes, Jitske'''
+
 player_one = 'Ruud Gullit'
 player_two = 'Marco van Basten'
 
@@ -16,22 +21,11 @@ report = f'{player_one} scored in the {goal_0}nd minute\n{player_two} scored in 
 print(report)
 
 player = "Ronald Koeman"
-first_name = player[0:6]
-'Ronald' in player
-
-'Koeman' in player
-last_name = player[7:13]
+index_space = player.find(" ")
+first_name = player[:index_space]
+last_name = player[(index_space + 1):len(player)]
 last_name_len = len(last_name)
-
-first_character = player[0:1]
-name_short = first_character + ". " + last_name
-
-scream = first_name + '! '
-times = len(first_name)
-to_chant = scream * times
-chant = to_chant[0:47]
-length_chant = len(chant)
-last_character = chant[length_chant - 1]
-good_chant = last_character != " "
-
+name_short = player[0:1] + ". " + last_name
+chant = ((first_name + "! ") * len(first_name))[:-1]
+good_chant = chant[-1] != " "
 
